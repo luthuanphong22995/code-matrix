@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+<title>Graph panel — starting</title>
+  <rect x="0" y="0" width="1280" height="800" fill="#fafafa" stroke="#999"/>
+  <!-- toolbar -->
+  <rect id="region-toolbar" x="0" y="0" width="1280" height="36" fill="#eee" stroke="#bbb"/>
+  <text x="12" y="23" font-size="13" font-weight="bold" fill="#333" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">Code Matrix</text>
+  <text id="text-sidecar-state" x="110" y="23" font-size="12" fill="#666" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">starting</text>
+  <rect id="btn-details-toggle" x="846" y="7" width="70" height="22" fill="#fff" stroke="#999"/>
+  <text x="881" y="22" font-size="12" text-anchor="middle" fill="#bbb" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">Details</text>
+  <rect id="btn-restart-server" x="1030" y="7" width="110" height="22" fill="#fff" stroke="#999"/>
+  <text x="1085" y="22" font-size="12" text-anchor="middle" fill="#bbb" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">Restart Server</text>
+  <rect id="btn-show-log" x="1150" y="7" width="110" height="22" fill="#fff" stroke="#999"/>
+  <text x="1205" y="22" font-size="12" text-anchor="middle" fill="#333" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">Show Log</text>
+  <!-- details region -->
+  <rect id="region-details" x="980" y="36" width="300" height="764" fill="#f3f3f3" stroke="#bbb"/>
+  <text x="996" y="62" font-size="12" font-weight="bold" fill="#555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">DETAILS</text>
+  <text id="text-details-empty" x="996" y="100" font-size="12" fill="#888" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">Select a node to see its details</text>
+  <rect id="region-main" x="0" y="36" width="980" height="764" fill="#fff"/>
+  <text id="text-overlay-starting" x="490" y="420" font-size="16" text-anchor="middle" fill="#666" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">Starting Code Matrix server…</text>
+</svg>
