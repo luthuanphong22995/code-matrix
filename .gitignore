@@ -1,2 +1,13 @@
 .claude/
 CLAUDE.md
+node_modules/
+extension/dist/
+extension/out/
+extension/bin/
+extension/.vscode-test/
+# copied in from the repo root by `bundle-server --package`
+extension/README.md
+extension/LICENSE
+core/target/
+*.vsix
+.kernel/
