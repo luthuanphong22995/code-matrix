@@ -11,3 +11,4 @@ extension/LICENSE
 core/target/
 *.vsix
 .kernel/
+*.md
