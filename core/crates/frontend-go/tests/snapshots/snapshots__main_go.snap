@@ -1,0 +1,55 @@
+---
+source: crates/frontend-go/tests/snapshots.rs
+expression: file
+---
+language: go
+path: main.go
+defs:
+  - kind: function
+    qualified_name: main
+    parent: ~
+    range:
+      start: 5
+      end: 12
+imports:
+  - specifier: fmt
+    span:
+      start: 3
+      end: 3
+refs:
+  - kind: calls
+    from: 0
+    target: parseConfig
+    span:
+      start: 6
+      end: 6
+  - kind: calls
+    from: 0
+    target: fetchData
+    span:
+      start: 7
+      end: 7
+  - kind: calls
+    from: 0
+    target: readFile
+    span:
+      start: 8
+      end: 8
+  - kind: calls
+    from: 0
+    target: cfg.Validate
+    span:
+      start: 9
+      end: 9
+  - kind: calls
+    from: 0
+    target: fmt.Println
+    span:
+      start: 11
+      end: 11
+  - kind: references
+    from: 0
+    target: Config
+    span:
+      start: 10
+      end: 10

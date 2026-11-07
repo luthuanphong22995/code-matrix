@@ -1,0 +1,243 @@
+---
+source: crates/frontend-typescript/tests/flow.rs
+expression: lowered
+---
+Lowered {
+    function: FlowFunction {
+        qualified_name: "Server.handle",
+        blocks: [
+            FlowBlock {
+                kind: Entry,
+                lines: None,
+                first_line: "",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 30,
+                        end: 32,
+                    },
+                ),
+                first_line: "let status = 200;",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 33,
+                        end: 33,
+                    },
+                ),
+                first_line: "status = 404;",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 36,
+                        end: 41,
+                    },
+                ),
+                first_line: "write(status);",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 43,
+                        end: 43,
+                    },
+                ),
+                first_line: "write(code);",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 46,
+                        end: 46,
+                    },
+                ),
+                first_line: "log(code);",
+            },
+            FlowBlock {
+                kind: Exit,
+                lines: None,
+                first_line: "",
+            },
+        ],
+        branches: [
+            (
+                0,
+                1,
+            ),
+            (
+                1,
+                2,
+            ),
+            (
+                1,
+                3,
+            ),
+            (
+                2,
+                3,
+            ),
+            (
+                3,
+                4,
+            ),
+            (
+                3,
+                5,
+            ),
+            (
+                4,
+                6,
+            ),
+            (
+                5,
+                6,
+            ),
+        ],
+        bindings: [
+            Binding {
+                name: "ready",
+                decl: Pos {
+                    line: 29,
+                    character: 9,
+                },
+            },
+            Binding {
+                name: "status",
+                decl: Pos {
+                    line: 30,
+                    character: 8,
+                },
+            },
+            Binding {
+                name: "code",
+                decl: Pos {
+                    line: 40,
+                    character: 10,
+                },
+            },
+        ],
+        events: [
+            FlowEvent {
+                block: 0,
+                binding: 0,
+                role: Def,
+                pos: Pos {
+                    line: 29,
+                    character: 9,
+                },
+                end_char: 14,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 1,
+                role: Def,
+                pos: Pos {
+                    line: 30,
+                    character: 8,
+                },
+                end_char: 14,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 1,
+                role: Use,
+                pos: Pos {
+                    line: 31,
+                    character: 8,
+                },
+                end_char: 14,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 32,
+                    character: 9,
+                },
+                end_char: 14,
+                capture: false,
+            },
+            FlowEvent {
+                block: 2,
+                binding: 1,
+                role: Def,
+                pos: Pos {
+                    line: 33,
+                    character: 6,
+                },
+                end_char: 12,
+                capture: false,
+            },
+            FlowEvent {
+                block: 3,
+                binding: 1,
+                role: Use,
+                pos: Pos {
+                    line: 36,
+                    character: 10,
+                },
+                end_char: 16,
+                capture: false,
+            },
+            FlowEvent {
+                block: 3,
+                binding: 2,
+                role: Def,
+                pos: Pos {
+                    line: 40,
+                    character: 10,
+                },
+                end_char: 14,
+                capture: false,
+            },
+            FlowEvent {
+                block: 3,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 41,
+                    character: 8,
+                },
+                end_char: 13,
+                capture: false,
+            },
+            FlowEvent {
+                block: 4,
+                binding: 2,
+                role: Use,
+                pos: Pos {
+                    line: 43,
+                    character: 12,
+                },
+                end_char: 16,
+                capture: false,
+            },
+            FlowEvent {
+                block: 5,
+                binding: 2,
+                role: Use,
+                pos: Pos {
+                    line: 46,
+                    character: 10,
+                },
+                end_char: 14,
+                capture: false,
+            },
+        ],
+    },
+    picked: Event(
+        1,
+    ),
+}

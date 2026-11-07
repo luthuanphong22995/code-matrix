@@ -1,0 +1,22 @@
+[package]
+name = "server"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "code-matrix-server"
+path = "src/main.rs"
+
+[dependencies]
+export = { path = "../export" }
+frontend-go = { path = "../frontend-go" }
+frontend-java = { path = "../frontend-java" }
+frontend-python = { path = "../frontend-python" }
+frontend-typescript = { path = "../frontend-typescript" }
+index = { path = "../index" }
+ir = { path = "../ir" }
+rpc = { path = "../rpc" }
+serde_json = "1"
+
+[lints]
+workspace = true

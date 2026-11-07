@@ -1,0 +1,153 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: symbols
+---
+FileSymbols {
+    language: "python",
+    path: "app/main.py",
+    defs: [
+        Def {
+            kind: Function,
+            qualified_name: "main",
+            parent: None,
+            range: LineRange {
+                start: 8,
+                end: 18,
+            },
+        },
+        Def {
+            kind: Function,
+            qualified_name: "main.helper",
+            parent: Some(
+                0,
+            ),
+            range: LineRange {
+                start: 15,
+                end: 16,
+            },
+        },
+    ],
+    imports: [
+        RawImport {
+            specifier: "import os",
+            span: LineRange {
+                start: 1,
+                end: 1,
+            },
+        },
+        RawImport {
+            specifier: "import app.config as cfg",
+            span: LineRange {
+                start: 2,
+                end: 2,
+            },
+        },
+        RawImport {
+            specifier: "from app.config import Config",
+            span: LineRange {
+                start: 3,
+                end: 3,
+            },
+        },
+        RawImport {
+            specifier: "from app.config import parse_config",
+            span: LineRange {
+                start: 3,
+                end: 3,
+            },
+        },
+        RawImport {
+            specifier: "from .util import read_file",
+            span: LineRange {
+                start: 4,
+                end: 4,
+            },
+        },
+        RawImport {
+            specifier: "from app import models",
+            span: LineRange {
+                start: 5,
+                end: 5,
+            },
+        },
+    ],
+    refs: [
+        RawRef {
+            kind: Calls,
+            from: Some(
+                0,
+            ),
+            target: "parse_config",
+            span: LineRange {
+                start: 9,
+                end: 9,
+            },
+        },
+        RawRef {
+            kind: Calls,
+            from: Some(
+                0,
+            ),
+            target: "cfg.parse_env",
+            span: LineRange {
+                start: 10,
+                end: 10,
+            },
+        },
+        RawRef {
+            kind: Calls,
+            from: Some(
+                0,
+            ),
+            target: "read_file",
+            span: LineRange {
+                start: 11,
+                end: 11,
+            },
+        },
+        RawRef {
+            kind: Calls,
+            from: Some(
+                0,
+            ),
+            target: "fetch_data",
+            span: LineRange {
+                start: 12,
+                end: 12,
+            },
+        },
+        RawRef {
+            kind: Calls,
+            from: Some(
+                0,
+            ),
+            target: "os.getcwd",
+            span: LineRange {
+                start: 13,
+                end: 13,
+            },
+        },
+        RawRef {
+            kind: References,
+            from: Some(
+                0,
+            ),
+            target: "Config",
+            span: LineRange {
+                start: 8,
+                end: 8,
+            },
+        },
+        RawRef {
+            kind: References,
+            from: Some(
+                0,
+            ),
+            target: "Config",
+            span: LineRange {
+                start: 9,
+                end: 9,
+            },
+        },
+    ],
+}

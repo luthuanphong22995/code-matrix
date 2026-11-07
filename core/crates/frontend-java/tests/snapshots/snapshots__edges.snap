@@ -1,0 +1,48 @@
+---
+source: crates/frontend-java/tests/snapshots.rs
+assertion_line: 75
+expression: "lines.join(\"\\n\")"
+---
+calls com.example.App.main -> add [unresolved]
+calls com.example.App.main -> com.example.App.run
+calls com.example.App.main -> com.example.Server
+calls com.example.App.main -> com.example.config.Config.parse
+calls com.example.App.main -> com.example.config.Config.parseEnv
+calls com.example.App.main -> com.example.util.Files.readFile
+calls com.example.App.main -> com.example.util.Mover.move
+calls com.example.App.main -> fetchData [unresolved]
+calls com.example.App.main -> java.util.ArrayList [unresolved]
+calls com.example.Server.Server -> com.example.config.Config.parse
+calls com.example.Server.start -> com.example.Base.log
+calls com.example.Server.start -> com.example.Server.start
+calls com.example.Server.start -> com.example.Server.stop
+calls com.example.config.Config.parse -> com.example.config.Config
+calls com.example.config.Config.parseEnv -> com.example.config.Config.parse
+calls com.example.config.Config.parseEnv -> getenv [unresolved]
+imports src/main/java/com/example/App.java -> com.example.util.* [unresolved]
+imports src/main/java/com/example/App.java -> java.util.List [unresolved]
+imports src/main/java/com/example/App.java -> src/main/java/com/example/config/Config.java
+imports src/main/java/com/example/App.java -> src/main/java/com/example/config/Config.java
+imports src/main/java/com/example/App.java -> src/misplaced/Mover.java
+imports src/main/java/com/example/Server.java -> src/main/java/com/example/config/Config.java
+references com.example.App.main -> List [unresolved]
+references com.example.App.main -> String [unresolved]
+references com.example.App.main -> String [unresolved]
+references com.example.App.main -> com.example.Server
+references com.example.App.main -> com.example.config.Config
+references com.example.App.main -> com.example.config.Config
+references com.example.App.run -> com.example.config.Config
+references com.example.Base.log -> String [unresolved]
+references com.example.Outer.Inner.status -> com.example.Status
+references com.example.Server -> com.example.Base
+references com.example.Server -> com.example.Lifecycle
+references com.example.Server -> com.example.config.Config
+references com.example.Status.next -> com.example.Status
+references com.example.config.Config -> String [unresolved]
+references com.example.config.Config.Config -> String [unresolved]
+references com.example.config.Config.parse -> String [unresolved]
+references com.example.config.Config.parse -> com.example.config.Config
+references com.example.config.Config.parseEnv -> com.example.config.Config
+references com.example.config.Setting -> String [unresolved]
+references com.example.util.Files.readFile -> String [unresolved]
+references com.example.util.Files.readFile -> String [unresolved]

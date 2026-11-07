@@ -1,0 +1,32 @@
+---
+source: crates/frontend-typescript/tests/snapshots.rs
+assertion_line: 74
+expression: "lines.join(\"\\n\")"
+---
+calls App.render -> Store (resolved)
+calls App.render -> helper (unresolved)
+calls legacy -> readFileSync (unresolved)
+calls loadDefaults -> parseConfig (resolved)
+calls main -> App (resolved)
+calls main -> fetchData (unresolved)
+calls main -> parseConfig (resolved)
+calls main -> readFile (resolved)
+calls parseConfig -> normalize (unresolved)
+calls parseConfig -> parseEnv (resolved)
+calls parseConfig.normalize -> trim (unresolved)
+calls src/index.ts -> main (resolved)
+imports legacy/old.js -> fs (unresolved)
+imports legacy/old.js -> legacy/view.jsx (resolved)
+imports src/App.tsx -> react (unresolved)
+imports src/App.tsx -> src/config.ts (resolved)
+imports src/index.ts -> react (unresolved)
+imports src/index.ts -> src/App.tsx (resolved)
+imports src/index.ts -> src/config.ts (resolved)
+imports src/index.ts -> src/util/index.ts (resolved)
+references App -> Component (unresolved)
+references App -> Config (resolved)
+references App.constructor -> Config (resolved)
+references Config -> Mode (resolved)
+references main -> Config (resolved)
+references parseConfig -> Config (resolved)
+references parseEnv -> Mode (resolved)

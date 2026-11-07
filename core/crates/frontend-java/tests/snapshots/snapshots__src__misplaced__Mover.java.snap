@@ -1,0 +1,22 @@
+---
+source: crates/frontend-java/tests/snapshots.rs
+assertion_line: 49
+expression: file
+---
+language: java
+path: src/misplaced/Mover.java
+defs:
+  - kind: class
+    qualified_name: com.example.util.Mover
+    parent: ~
+    range:
+      start: 3
+      end: 6
+  - kind: function
+    qualified_name: com.example.util.Mover.move
+    parent: 0
+    range:
+      start: 4
+      end: 5
+imports: []
+refs: []

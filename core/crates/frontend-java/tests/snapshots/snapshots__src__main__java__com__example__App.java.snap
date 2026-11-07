@@ -1,0 +1,144 @@
+---
+source: crates/frontend-java/tests/snapshots.rs
+assertion_line: 49
+expression: file
+---
+language: java
+path: src/main/java/com/example/App.java
+defs:
+  - kind: class
+    qualified_name: com.example.App
+    parent: ~
+    range:
+      start: 9
+      end: 24
+  - kind: function
+    qualified_name: com.example.App.main
+    parent: 0
+    range:
+      start: 10
+      end: 20
+  - kind: function
+    qualified_name: com.example.App.run
+    parent: 0
+    range:
+      start: 22
+      end: 23
+imports:
+  - specifier: com.example.config.Config
+    span:
+      start: 3
+      end: 3
+  - specifier: com.example.util.*
+    span:
+      start: 4
+      end: 4
+  - specifier: com.example.util.Mover
+    span:
+      start: 5
+      end: 5
+  - specifier: java.util.List
+    span:
+      start: 6
+      end: 6
+  - specifier: static com.example.config.Config.parseEnv
+    span:
+      start: 7
+      end: 7
+refs:
+  - kind: references
+    from: 1
+    target: String
+    span:
+      start: 10
+      end: 10
+  - kind: references
+    from: 1
+    target: Config
+    span:
+      start: 11
+      end: 11
+  - kind: calls
+    from: 1
+    target: Config.parse
+    span:
+      start: 11
+      end: 11
+  - kind: calls
+    from: 1
+    target: parseEnv
+    span:
+      start: 12
+      end: 12
+  - kind: references
+    from: 1
+    target: String
+    span:
+      start: 13
+      end: 13
+  - kind: calls
+    from: 1
+    target: Files.readFile
+    span:
+      start: 13
+      end: 13
+  - kind: calls
+    from: 1
+    target: fetchData
+    span:
+      start: 14
+      end: 14
+  - kind: references
+    from: 1
+    target: Server
+    span:
+      start: 15
+      end: 15
+  - kind: calls
+    from: 1
+    target: new Server
+    span:
+      start: 15
+      end: 15
+  - kind: references
+    from: 1
+    target: List
+    span:
+      start: 16
+      end: 16
+  - kind: references
+    from: 1
+    target: Config
+    span:
+      start: 16
+      end: 16
+  - kind: calls
+    from: 1
+    target: new java.util.ArrayList
+    span:
+      start: 16
+      end: 16
+  - kind: calls
+    from: 1
+    target: list.add
+    span:
+      start: 17
+      end: 17
+  - kind: calls
+    from: 1
+    target: Mover.move
+    span:
+      start: 18
+      end: 18
+  - kind: calls
+    from: 1
+    target: run
+    span:
+      start: 19
+      end: 19
+  - kind: references
+    from: 2
+    target: Config
+    span:
+      start: 22
+      end: 22

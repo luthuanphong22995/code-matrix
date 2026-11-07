@@ -1,0 +1,73 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: symbols
+---
+FileSymbols {
+    language: "python",
+    path: "app/config.py",
+    defs: [
+        Def {
+            kind: Class,
+            qualified_name: "Config",
+            parent: None,
+            range: LineRange {
+                start: 1,
+                end: 2,
+            },
+        },
+        Def {
+            kind: Function,
+            qualified_name: "parse_config",
+            parent: None,
+            range: LineRange {
+                start: 5,
+                end: 7,
+            },
+        },
+        Def {
+            kind: Function,
+            qualified_name: "parse_env",
+            parent: None,
+            range: LineRange {
+                start: 10,
+                end: 11,
+            },
+        },
+    ],
+    imports: [],
+    refs: [
+        RawRef {
+            kind: Calls,
+            from: Some(
+                1,
+            ),
+            target: "parse_env",
+            span: LineRange {
+                start: 6,
+                end: 6,
+            },
+        },
+        RawRef {
+            kind: Calls,
+            from: Some(
+                1,
+            ),
+            target: "Config",
+            span: LineRange {
+                start: 7,
+                end: 7,
+            },
+        },
+        RawRef {
+            kind: References,
+            from: Some(
+                1,
+            ),
+            target: "Config",
+            span: LineRange {
+                start: 5,
+                end: 5,
+            },
+        },
+    ],
+}

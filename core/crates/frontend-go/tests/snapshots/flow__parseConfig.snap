@@ -1,0 +1,264 @@
+---
+source: crates/frontend-go/tests/flow.rs
+expression: lowered
+---
+Lowered {
+    function: FlowFunction {
+        qualified_name: "parseConfig",
+        blocks: [
+            FlowBlock {
+                kind: Entry,
+                lines: None,
+                first_line: "",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 12,
+                        end: 12,
+                    },
+                ),
+                first_line: "total := 0",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 13,
+                        end: 13,
+                    },
+                ),
+                first_line: "for _, n := range open(path) {",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 14,
+                        end: 14,
+                    },
+                ),
+                first_line: "total = total + n",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 16,
+                        end: 17,
+                    },
+                ),
+                first_line: "unused := defaultPath",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 18,
+                        end: 18,
+                    },
+                ),
+                first_line: "return total",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 20,
+                        end: 21,
+                    },
+                ),
+                first_line: "log(path)",
+            },
+            FlowBlock {
+                kind: Exit,
+                lines: None,
+                first_line: "",
+            },
+        ],
+        branches: [
+            (
+                0,
+                1,
+            ),
+            (
+                1,
+                2,
+            ),
+            (
+                2,
+                3,
+            ),
+            (
+                3,
+                2,
+            ),
+            (
+                2,
+                4,
+            ),
+            (
+                4,
+                5,
+            ),
+            (
+                5,
+                7,
+            ),
+            (
+                4,
+                6,
+            ),
+            (
+                6,
+                7,
+            ),
+        ],
+        bindings: [
+            Binding {
+                name: "path",
+                decl: Pos {
+                    line: 11,
+                    character: 17,
+                },
+            },
+            Binding {
+                name: "total",
+                decl: Pos {
+                    line: 12,
+                    character: 1,
+                },
+            },
+            Binding {
+                name: "n",
+                decl: Pos {
+                    line: 13,
+                    character: 8,
+                },
+            },
+            Binding {
+                name: "unused",
+                decl: Pos {
+                    line: 16,
+                    character: 1,
+                },
+            },
+        ],
+        events: [
+            FlowEvent {
+                block: 0,
+                binding: 0,
+                role: Def,
+                pos: Pos {
+                    line: 11,
+                    character: 17,
+                },
+                end_char: 21,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 1,
+                role: Def,
+                pos: Pos {
+                    line: 12,
+                    character: 1,
+                },
+                end_char: 6,
+                capture: false,
+            },
+            FlowEvent {
+                block: 2,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 13,
+                    character: 24,
+                },
+                end_char: 28,
+                capture: false,
+            },
+            FlowEvent {
+                block: 2,
+                binding: 2,
+                role: Def,
+                pos: Pos {
+                    line: 13,
+                    character: 8,
+                },
+                end_char: 9,
+                capture: false,
+            },
+            FlowEvent {
+                block: 3,
+                binding: 1,
+                role: Use,
+                pos: Pos {
+                    line: 14,
+                    character: 10,
+                },
+                end_char: 15,
+                capture: false,
+            },
+            FlowEvent {
+                block: 3,
+                binding: 2,
+                role: Use,
+                pos: Pos {
+                    line: 14,
+                    character: 18,
+                },
+                end_char: 19,
+                capture: false,
+            },
+            FlowEvent {
+                block: 3,
+                binding: 1,
+                role: Def,
+                pos: Pos {
+                    line: 14,
+                    character: 2,
+                },
+                end_char: 7,
+                capture: false,
+            },
+            FlowEvent {
+                block: 4,
+                binding: 3,
+                role: Def,
+                pos: Pos {
+                    line: 16,
+                    character: 1,
+                },
+                end_char: 7,
+                capture: false,
+            },
+            FlowEvent {
+                block: 5,
+                binding: 1,
+                role: Use,
+                pos: Pos {
+                    line: 18,
+                    character: 9,
+                },
+                end_char: 14,
+                capture: false,
+            },
+            FlowEvent {
+                block: 6,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 20,
+                    character: 5,
+                },
+                end_char: 9,
+                capture: false,
+            },
+        ],
+    },
+    picked: Event(
+        1,
+    ),
+}

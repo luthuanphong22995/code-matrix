@@ -1,0 +1,85 @@
+---
+source: crates/frontend-go/tests/snapshots.rs
+expression: file
+---
+language: go
+path: config.go
+defs:
+  - kind: class
+    qualified_name: Config
+    parent: ~
+    range:
+      start: 5
+      end: 8
+  - kind: class
+    qualified_name: Source
+    parent: ~
+    range:
+      start: 10
+      end: 12
+  - kind: function
+    qualified_name: parseConfig
+    parent: ~
+    range:
+      start: 14
+      end: 18
+  - kind: function
+    qualified_name: parseEnv
+    parent: ~
+    range:
+      start: 20
+      end: 20
+  - kind: function
+    qualified_name: Config.Validate
+    parent: 0
+    range:
+      start: 22
+      end: 22
+  - kind: function
+    qualified_name: Level.String
+    parent: ~
+    range:
+      start: 26
+      end: 28
+imports:
+  - specifier: example.com/app/internal/db
+    span:
+      start: 3
+      end: 3
+refs:
+  - kind: calls
+    from: 2
+    target: db.Open
+    span:
+      start: 15
+      end: 15
+  - kind: calls
+    from: 2
+    target: parseEnv
+    span:
+      start: 16
+      end: 16
+  - kind: references
+    from: 0
+    target: db.Conn
+    span:
+      start: 7
+      end: 7
+  - kind: references
+    from: 1
+    target: Config
+    span:
+      start: 11
+      end: 11
+  - kind: references
+    from: 2
+    target: Config
+    span:
+      start: 14
+      end: 14
+  - kind: references
+    from: 2
+    target: Config
+    span:
+      start: 17
+      end: 17

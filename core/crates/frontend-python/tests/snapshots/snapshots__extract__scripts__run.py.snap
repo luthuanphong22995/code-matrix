@@ -1,0 +1,43 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: symbols
+---
+FileSymbols {
+    language: "python",
+    path: "scripts/run.py",
+    defs: [],
+    imports: [
+        RawImport {
+            specifier: "import app",
+            span: LineRange {
+                start: 1,
+                end: 1,
+            },
+        },
+        RawImport {
+            specifier: "import app.main",
+            span: LineRange {
+                start: 2,
+                end: 2,
+            },
+        },
+        RawImport {
+            specifier: "from app.main import main",
+            span: LineRange {
+                start: 3,
+                end: 3,
+            },
+        },
+    ],
+    refs: [
+        RawRef {
+            kind: Calls,
+            from: None,
+            target: "main",
+            span: LineRange {
+                start: 5,
+                end: 5,
+            },
+        },
+    ],
+}

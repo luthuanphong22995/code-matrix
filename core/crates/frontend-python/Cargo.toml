@@ -1,0 +1,15 @@
+[package]
+name = "frontend-python"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+ir = { path = "../ir" }
+tree-sitter = "0.25"
+tree-sitter-python = "0.25.0"
+
+[dev-dependencies]
+insta = "1.49"
+
+[lints]
+workspace = true

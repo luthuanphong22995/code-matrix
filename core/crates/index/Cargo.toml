@@ -1,0 +1,11 @@
+[package]
+name = "index"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+ignore = "0.4"
+ir = { path = "../ir" }
+
+[lints]
+workspace = true

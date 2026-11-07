@@ -1,0 +1,16 @@
+---
+source: crates/frontend-typescript/tests/snapshots.rs
+assertion_line: 46
+expression: symbols
+---
+language: typescript
+path: legacy/view.jsx
+defs:
+  - kind: function
+    qualified_name: View
+    parent: ~
+    range:
+      start: 1
+      end: 3
+imports: []
+refs: []

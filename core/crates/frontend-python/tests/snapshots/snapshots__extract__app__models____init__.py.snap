@@ -1,0 +1,11 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: symbols
+---
+FileSymbols {
+    language: "python",
+    path: "app/models/__init__.py",
+    defs: [],
+    imports: [],
+    refs: [],
+}

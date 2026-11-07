@@ -1,0 +1,34 @@
+---
+source: crates/frontend-java/tests/snapshots.rs
+assertion_line: 49
+expression: file
+---
+language: java
+path: src/main/java/com/example/util/Files.java
+defs:
+  - kind: class
+    qualified_name: com.example.util.Files
+    parent: ~
+    range:
+      start: 3
+      end: 7
+  - kind: function
+    qualified_name: com.example.util.Files.readFile
+    parent: 0
+    range:
+      start: 4
+      end: 6
+imports: []
+refs:
+  - kind: references
+    from: 1
+    target: String
+    span:
+      start: 4
+      end: 4
+  - kind: references
+    from: 1
+    target: String
+    span:
+      start: 4
+      end: 4

@@ -1,0 +1,70 @@
+---
+source: crates/frontend-java/tests/snapshots.rs
+assertion_line: 49
+expression: file
+---
+language: java
+path: src/main/java/com/example/Lifecycle.java
+defs:
+  - kind: class
+    qualified_name: com.example.Lifecycle
+    parent: ~
+    range:
+      start: 3
+      end: 5
+  - kind: function
+    qualified_name: com.example.Lifecycle.stop
+    parent: 0
+    range:
+      start: 4
+      end: 4
+  - kind: class
+    qualified_name: com.example.Status
+    parent: ~
+    range:
+      start: 7
+      end: 14
+  - kind: function
+    qualified_name: com.example.Status.next
+    parent: 2
+    range:
+      start: 11
+      end: 13
+  - kind: class
+    qualified_name: com.example.Outer
+    parent: ~
+    range:
+      start: 16
+      end: 22
+  - kind: class
+    qualified_name: com.example.Outer.Inner
+    parent: 4
+    range:
+      start: 17
+      end: 21
+  - kind: function
+    qualified_name: com.example.Outer.Inner.status
+    parent: 5
+    range:
+      start: 18
+      end: 20
+  - kind: class
+    qualified_name: com.example.Marker
+    parent: ~
+    range:
+      start: 24
+      end: 25
+imports: []
+refs:
+  - kind: references
+    from: 3
+    target: Status
+    span:
+      start: 11
+      end: 11
+  - kind: references
+    from: 6
+    target: Status
+    span:
+      start: 18
+      end: 18

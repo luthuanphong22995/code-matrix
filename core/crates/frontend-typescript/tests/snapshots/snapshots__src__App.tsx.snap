@@ -1,0 +1,72 @@
+---
+source: crates/frontend-typescript/tests/snapshots.rs
+assertion_line: 46
+expression: symbols
+---
+language: typescript
+path: src/App.tsx
+defs:
+  - kind: class
+    qualified_name: Store
+    parent: ~
+    range:
+      start: 4
+      end: 6
+  - kind: class
+    qualified_name: App
+    parent: ~
+    range:
+      start: 8
+      end: 18
+  - kind: function
+    qualified_name: App.constructor
+    parent: 1
+    range:
+      start: 9
+      end: 11
+  - kind: function
+    qualified_name: App.render
+    parent: 1
+    range:
+      start: 13
+      end: 17
+imports:
+  - specifier: react
+    span:
+      start: 1
+      end: 1
+  - specifier: "./config"
+    span:
+      start: 2
+      end: 2
+refs:
+  - kind: references
+    from: 1
+    target: Component@
+    span:
+      start: 8
+      end: 8
+  - kind: references
+    from: 1
+    target: "Config@./config#Config"
+    span:
+      start: 8
+      end: 8
+  - kind: references
+    from: 2
+    target: "Config@./config#Config"
+    span:
+      start: 9
+      end: 9
+  - kind: calls
+    from: 3
+    target: Store
+    span:
+      start: 14
+      end: 14
+  - kind: calls
+    from: 3
+    target: helper@
+    span:
+      start: 15
+      end: 15

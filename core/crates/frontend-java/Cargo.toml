@@ -1,0 +1,15 @@
+[package]
+name = "frontend-java"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+ir = { path = "../ir" }
+tree-sitter = "0.25"
+tree-sitter-java = "0.23.5"
+
+[dev-dependencies]
+insta = { version = "1.49", features = ["yaml"] }
+
+[lints]
+workspace = true

@@ -1,0 +1,30 @@
+---
+source: crates/frontend-go/tests/snapshots.rs
+expression: "rendered.join(\"\\n\")"
+---
+kind: calls, from: config.go::parseConfig, to: config.go::parseEnv, resolved: true
+kind: calls, from: config.go::parseConfig, to: internal/db/conn.go::Open, resolved: true
+kind: calls, from: main.go::main, to: ?Validate, resolved: false
+kind: calls, from: main.go::main, to: ?fetchData, resolved: false
+kind: calls, from: main.go::main, to: ?fmt.Println, resolved: false
+kind: calls, from: main.go::main, to: config.go::parseConfig, resolved: true
+kind: calls, from: main.go::main, to: util.go::readFile, resolved: true
+kind: contains, from: config.go, to: config.go::Config, resolved: true
+kind: contains, from: config.go, to: config.go::Level.String, resolved: true
+kind: contains, from: config.go, to: config.go::Source, resolved: true
+kind: contains, from: config.go, to: config.go::parseConfig, resolved: true
+kind: contains, from: config.go, to: config.go::parseEnv, resolved: true
+kind: contains, from: config.go::Config, to: config.go::Config.Validate, resolved: true
+kind: contains, from: internal/db/conn.go, to: internal/db/conn.go::Conn, resolved: true
+kind: contains, from: internal/db/conn.go, to: internal/db/conn.go::Open, resolved: true
+kind: contains, from: main.go, to: main.go::main, resolved: true
+kind: contains, from: util.go, to: util.go::readFile, resolved: true
+kind: imports, from: config.go, to: internal/db/conn.go, resolved: true
+kind: imports, from: main.go, to: ?fmt, resolved: false
+kind: references, from: config.go::Config, to: internal/db/conn.go::Conn, resolved: true
+kind: references, from: config.go::Source, to: config.go::Config, resolved: true
+kind: references, from: config.go::parseConfig, to: config.go::Config, resolved: true
+kind: references, from: config.go::parseConfig, to: config.go::Config, resolved: true
+kind: references, from: internal/db/conn.go::Open, to: internal/db/conn.go::Conn, resolved: true
+kind: references, from: internal/db/conn.go::Open, to: internal/db/conn.go::Conn, resolved: true
+kind: references, from: main.go::main, to: config.go::Config, resolved: true

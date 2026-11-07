@@ -1,0 +1,15 @@
+---
+source: crates/frontend-go/tests/snapshots.rs
+expression: file
+---
+language: go
+path: util.go
+defs:
+  - kind: function
+    qualified_name: readFile
+    parent: ~
+    range:
+      start: 3
+      end: 3
+imports: []
+refs: []

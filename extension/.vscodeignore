@@ -1,0 +1,10 @@
+# Allowlist: everything is ignored except what the negations below re-admit.
+# vsce keeps a file if it matches any `!` pattern, so the ignore lines are not re-applied to
+# re-admitted files — hence dist/*.js + dist/*.css rather than dist/** to keep source maps out.
+**
+!dist/*.js
+!dist/*.css
+!bin/**
+!package.json
+!README.md
+!LICENSE

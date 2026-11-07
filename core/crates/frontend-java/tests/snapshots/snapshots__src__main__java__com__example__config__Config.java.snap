@@ -1,0 +1,94 @@
+---
+source: crates/frontend-java/tests/snapshots.rs
+assertion_line: 49
+expression: file
+---
+language: java
+path: src/main/java/com/example/config/Config.java
+defs:
+  - kind: class
+    qualified_name: com.example.config.Config
+    parent: ~
+    range:
+      start: 3
+      end: 17
+  - kind: function
+    qualified_name: com.example.config.Config.Config
+    parent: 0
+    range:
+      start: 6
+      end: 8
+  - kind: function
+    qualified_name: com.example.config.Config.parse
+    parent: 0
+    range:
+      start: 10
+      end: 12
+  - kind: function
+    qualified_name: com.example.config.Config.parseEnv
+    parent: 0
+    range:
+      start: 14
+      end: 16
+  - kind: class
+    qualified_name: com.example.config.Setting
+    parent: ~
+    range:
+      start: 19
+      end: 20
+imports: []
+refs:
+  - kind: references
+    from: 0
+    target: String
+    span:
+      start: 4
+      end: 4
+  - kind: references
+    from: 1
+    target: String
+    span:
+      start: 6
+      end: 6
+  - kind: references
+    from: 2
+    target: Config
+    span:
+      start: 10
+      end: 10
+  - kind: references
+    from: 2
+    target: String
+    span:
+      start: 10
+      end: 10
+  - kind: calls
+    from: 2
+    target: new Config
+    span:
+      start: 11
+      end: 11
+  - kind: references
+    from: 3
+    target: Config
+    span:
+      start: 14
+      end: 14
+  - kind: calls
+    from: 3
+    target: parse
+    span:
+      start: 15
+      end: 15
+  - kind: calls
+    from: 3
+    target: System.getenv
+    span:
+      start: 15
+      end: 15
+  - kind: references
+    from: 4
+    target: String
+    span:
+      start: 19
+      end: 19

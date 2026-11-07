@@ -1,0 +1,33 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: symbols
+---
+FileSymbols {
+    language: "python",
+    path: "app/util.py",
+    defs: [
+        Def {
+            kind: Function,
+            qualified_name: "read_file",
+            parent: None,
+            range: LineRange {
+                start: 1,
+                end: 2,
+            },
+        },
+    ],
+    imports: [],
+    refs: [
+        RawRef {
+            kind: References,
+            from: Some(
+                0,
+            ),
+            target: "str",
+            span: LineRange {
+                start: 1,
+                end: 1,
+            },
+        },
+    ],
+}

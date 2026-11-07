@@ -1,0 +1,30 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: "rows.join(\"\\n\")"
+---
+calls | app/config.py::parse_config -> app/config.py::Config | true
+calls | app/config.py::parse_config -> app/config.py::parse_env | true
+calls | app/main.py::main -> ?fetch_data | false
+calls | app/main.py::main -> ?getcwd | false
+calls | app/main.py::main -> app/config.py::parse_config | true
+calls | app/main.py::main -> app/config.py::parse_env | true
+calls | app/main.py::main -> app/util.py::read_file | true
+calls | app/models/user.py::User.load -> ?save | false
+calls | app/models/user.py::User.touch -> app/models/user.py::User.load | true
+calls | scripts/run.py -> app/main.py::main | true
+imports | app/main.py -> ?os | false
+imports | app/main.py -> app/config.py | true
+imports | app/main.py -> app/config.py | true
+imports | app/main.py -> app/config.py | true
+imports | app/main.py -> app/models/__init__.py | true
+imports | app/main.py -> app/util.py | true
+imports | app/models/user.py -> app/models/base.py | true
+imports | app/models/user.py -> app/util.py | true
+imports | scripts/run.py -> app/__init__.py | true
+imports | scripts/run.py -> app/main.py | true
+imports | scripts/run.py -> app/main.py | true
+references | app/config.py::parse_config -> app/config.py::Config | true
+references | app/main.py::main -> app/config.py::Config | true
+references | app/main.py::main -> app/config.py::Config | true
+references | app/models/user.py::User -> app/models/base.py::Base | true
+references | app/util.py::read_file -> ?str | false

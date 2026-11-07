@@ -1,0 +1,30 @@
+---
+source: crates/frontend-typescript/tests/snapshots.rs
+assertion_line: 46
+expression: symbols
+---
+language: typescript
+path: legacy/old.js
+defs:
+  - kind: function
+    qualified_name: legacy
+    parent: ~
+    range:
+      start: 4
+      end: 6
+imports:
+  - specifier: fs
+    span:
+      start: 1
+      end: 1
+  - specifier: "./view"
+    span:
+      start: 2
+      end: 2
+refs:
+  - kind: calls
+    from: 0
+    target: readFileSync@
+    span:
+      start: 5
+      end: 5

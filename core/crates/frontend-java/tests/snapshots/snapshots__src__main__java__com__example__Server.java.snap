@@ -1,0 +1,80 @@
+---
+source: crates/frontend-java/tests/snapshots.rs
+assertion_line: 49
+expression: file
+---
+language: java
+path: src/main/java/com/example/Server.java
+defs:
+  - kind: class
+    qualified_name: com.example.Server
+    parent: ~
+    range:
+      start: 5
+      end: 23
+  - kind: function
+    qualified_name: com.example.Server.Server
+    parent: 0
+    range:
+      start: 8
+      end: 10
+  - kind: function
+    qualified_name: com.example.Server.start
+    parent: 0
+    range:
+      start: 12
+      end: 14
+  - kind: function
+    qualified_name: com.example.Server.stop
+    parent: 0
+    range:
+      start: 21
+      end: 22
+imports:
+  - specifier: com.example.config.Config
+    span:
+      start: 3
+      end: 3
+refs:
+  - kind: references
+    from: 0
+    target: Base
+    span:
+      start: 5
+      end: 5
+  - kind: references
+    from: 0
+    target: Lifecycle
+    span:
+      start: 5
+      end: 5
+  - kind: references
+    from: 0
+    target: Config
+    span:
+      start: 6
+      end: 6
+  - kind: calls
+    from: 1
+    target: Config.parse
+    span:
+      start: 9
+      end: 9
+  - kind: calls
+    from: 2
+    target: start
+    span:
+      start: 13
+      end: 13
+  - kind: calls
+    from: 2
+    target: log
+    span:
+      start: 17
+      end: 17
+  - kind: calls
+    from: 2
+    target: this.stop
+    span:
+      start: 18
+      end: 18

@@ -1,0 +1,32 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: symbols
+---
+FileSymbols {
+    language: "python",
+    path: "app/models/base.py",
+    defs: [
+        Def {
+            kind: Class,
+            qualified_name: "Base",
+            parent: None,
+            range: LineRange {
+                start: 1,
+                end: 3,
+            },
+        },
+        Def {
+            kind: Function,
+            qualified_name: "Base.save",
+            parent: Some(
+                0,
+            ),
+            range: LineRange {
+                start: 2,
+                end: 3,
+            },
+        },
+    ],
+    imports: [],
+    refs: [],
+}

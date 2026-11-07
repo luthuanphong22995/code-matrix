@@ -1,0 +1,149 @@
+---
+source: crates/frontend-python/tests/flow.rs
+expression: lowered
+---
+Lowered {
+    function: FlowFunction {
+        qualified_name: "handle",
+        blocks: [
+            FlowBlock {
+                kind: Entry,
+                lines: None,
+                first_line: "",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 2,
+                        end: 3,
+                    },
+                ),
+                first_line: "code = read()",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 4,
+                        end: 4,
+                    },
+                ),
+                first_line: "send(code)",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 6,
+                        end: 6,
+                    },
+                ),
+                first_line: "log(code)",
+            },
+            FlowBlock {
+                kind: Exit,
+                lines: None,
+                first_line: "",
+            },
+        ],
+        branches: [
+            (
+                0,
+                1,
+            ),
+            (
+                1,
+                2,
+            ),
+            (
+                1,
+                3,
+            ),
+            (
+                2,
+                4,
+            ),
+            (
+                3,
+                4,
+            ),
+        ],
+        bindings: [
+            Binding {
+                name: "req",
+                decl: Pos {
+                    line: 1,
+                    character: 11,
+                },
+            },
+            Binding {
+                name: "code",
+                decl: Pos {
+                    line: 2,
+                    character: 4,
+                },
+            },
+        ],
+        events: [
+            FlowEvent {
+                block: 0,
+                binding: 0,
+                role: Def,
+                pos: Pos {
+                    line: 1,
+                    character: 11,
+                },
+                end_char: 14,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 1,
+                role: Def,
+                pos: Pos {
+                    line: 2,
+                    character: 4,
+                },
+                end_char: 8,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 3,
+                    character: 7,
+                },
+                end_char: 10,
+                capture: false,
+            },
+            FlowEvent {
+                block: 2,
+                binding: 1,
+                role: Use,
+                pos: Pos {
+                    line: 4,
+                    character: 13,
+                },
+                end_char: 17,
+                capture: false,
+            },
+            FlowEvent {
+                block: 3,
+                binding: 1,
+                role: Use,
+                pos: Pos {
+                    line: 6,
+                    character: 12,
+                },
+                end_char: 16,
+                capture: false,
+            },
+        ],
+    },
+    picked: Event(
+        1,
+    ),
+}

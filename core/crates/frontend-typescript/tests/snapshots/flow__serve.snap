@@ -1,0 +1,128 @@
+---
+source: crates/frontend-typescript/tests/flow.rs
+expression: lowered
+---
+Lowered {
+    function: FlowFunction {
+        qualified_name: "serve",
+        blocks: [
+            FlowBlock {
+                kind: Entry,
+                lines: None,
+                first_line: "",
+            },
+            FlowBlock {
+                kind: Basic,
+                lines: Some(
+                    LineRange {
+                        start: 90,
+                        end: 99,
+                    },
+                ),
+                first_line: "const limit = 5;",
+            },
+            FlowBlock {
+                kind: Exit,
+                lines: None,
+                first_line: "",
+            },
+        ],
+        branches: [
+            (
+                0,
+                1,
+            ),
+            (
+                1,
+                2,
+            ),
+        ],
+        bindings: [
+            Binding {
+                name: "limit",
+                decl: Pos {
+                    line: 90,
+                    character: 8,
+                },
+            },
+            Binding {
+                name: "f",
+                decl: Pos {
+                    line: 92,
+                    character: 8,
+                },
+            },
+        ],
+        events: [
+            FlowEvent {
+                block: 1,
+                binding: 0,
+                role: Def,
+                pos: Pos {
+                    line: 90,
+                    character: 8,
+                },
+                end_char: 13,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 92,
+                    character: 12,
+                },
+                end_char: 13,
+                capture: true,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 1,
+                role: Def,
+                pos: Pos {
+                    line: 92,
+                    character: 8,
+                },
+                end_char: 9,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 1,
+                role: Use,
+                pos: Pos {
+                    line: 96,
+                    character: 2,
+                },
+                end_char: 3,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 97,
+                    character: 8,
+                },
+                end_char: 13,
+                capture: false,
+            },
+            FlowEvent {
+                block: 1,
+                binding: 0,
+                role: Use,
+                pos: Pos {
+                    line: 99,
+                    character: 2,
+                },
+                end_char: 10,
+                capture: true,
+            },
+        ],
+    },
+    picked: Event(
+        0,
+    ),
+}

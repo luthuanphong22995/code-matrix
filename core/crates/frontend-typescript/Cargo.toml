@@ -1,0 +1,15 @@
+[package]
+name = "frontend-typescript"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+ir = { path = "../ir" }
+tree-sitter = "0.25"
+tree-sitter-typescript = "0.23"
+
+[dev-dependencies]
+insta = { version = "1", features = ["yaml"] }
+
+[lints]
+workspace = true

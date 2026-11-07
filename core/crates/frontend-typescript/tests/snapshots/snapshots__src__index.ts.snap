@@ -1,0 +1,68 @@
+---
+source: crates/frontend-typescript/tests/snapshots.rs
+assertion_line: 46
+expression: symbols
+---
+language: typescript
+path: src/index.ts
+defs:
+  - kind: function
+    qualified_name: main
+    parent: ~
+    range:
+      start: 6
+      end: 11
+imports:
+  - specifier: "./config.js"
+    span:
+      start: 1
+      end: 1
+  - specifier: "./util"
+    span:
+      start: 2
+      end: 2
+  - specifier: "./App"
+    span:
+      start: 3
+      end: 3
+  - specifier: react
+    span:
+      start: 4
+      end: 4
+refs:
+  - kind: references
+    from: 0
+    target: "Config@./config.js#Config"
+    span:
+      start: 7
+      end: 7
+  - kind: calls
+    from: 0
+    target: "parseConfig@./config.js#parseConfig"
+    span:
+      start: 7
+      end: 7
+  - kind: calls
+    from: 0
+    target: "readFile@./util#readFile"
+    span:
+      start: 8
+      end: 8
+  - kind: calls
+    from: 0
+    target: fetchData
+    span:
+      start: 9
+      end: 9
+  - kind: calls
+    from: 0
+    target: "App@./App#default"
+    span:
+      start: 10
+      end: 10
+  - kind: calls
+    from: ~
+    target: main
+    span:
+      start: 13
+      end: 13

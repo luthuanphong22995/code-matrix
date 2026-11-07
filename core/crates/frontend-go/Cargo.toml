@@ -1,0 +1,15 @@
+[package]
+name = "frontend-go"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+ir = { path = "../ir" }
+tree-sitter = "0.25"
+tree-sitter-go = "0.25"
+
+[dev-dependencies]
+insta = { version = "1", features = ["yaml"] }
+
+[lints]
+workspace = true

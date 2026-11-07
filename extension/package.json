@@ -1,0 +1,87 @@
+{
+  "name": "code-matrix",
+  "displayName": "Code Matrix",
+  "publisher": "code-matrix",
+  "version": "0.0.1",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:codeMatrix.openGraph",
+    "onCommand:codeMatrix.restartServer",
+    "onCommand:codeMatrix.showLog",
+    "onCommand:codeMatrix.reindex",
+    "onCommand:codeMatrix.traceDataFlow"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Code Matrix",
+      "properties": {
+        "codeMatrix.graph.scopeThreshold": {
+          "type": "number",
+          "default": 2000,
+          "minimum": 0,
+          "description": "Above this many graph nodes (all kinds), the graph canvas switches to scoped view: it draws only the neighbourhood of the node selected in the tree or on the canvas."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "codeMatrix.openGraph",
+        "title": "Code Matrix: Open Graph"
+      },
+      {
+        "command": "codeMatrix.restartServer",
+        "title": "Code Matrix: Restart Server"
+      },
+      {
+        "command": "codeMatrix.showLog",
+        "title": "Code Matrix: Show Log"
+      },
+      {
+        "command": "codeMatrix.reindex",
+        "title": "Code Matrix: Re-index Workspace"
+      },
+      {
+        "command": "codeMatrix.traceDataFlow",
+        "category": "Code Matrix",
+        "title": "Trace Data Flow"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeMatrix.traceDataFlow",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "lint": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "test:integration": "tsc -p tsconfig.test.json && node out/test/integration/runTest.js",
+    "bundle-server": "node scripts/bundle-server.mjs",
+    "package": "npm run build && node scripts/bundle-server.mjs --profile release --package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.17.0",
+    "@types/vscode": "~1.90.0",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.1",
+    "esbuild": "^0.24.0",
+    "glob": "^11.0.0",
+    "jsdom": "^29.1.1",
+    "mocha": "^10.8.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "cytoscape": "^3.34.4"
+  }
+}

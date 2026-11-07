@@ -1,0 +1,92 @@
+---
+source: crates/frontend-python/tests/snapshots.rs
+expression: symbols
+---
+FileSymbols {
+    language: "python",
+    path: "app/models/user.py",
+    defs: [
+        Def {
+            kind: Class,
+            qualified_name: "User",
+            parent: None,
+            range: LineRange {
+                start: 5,
+                end: 11,
+            },
+        },
+        Def {
+            kind: Function,
+            qualified_name: "User.load",
+            parent: Some(
+                0,
+            ),
+            range: LineRange {
+                start: 6,
+                end: 8,
+            },
+        },
+        Def {
+            kind: Function,
+            qualified_name: "User.touch",
+            parent: Some(
+                0,
+            ),
+            range: LineRange {
+                start: 10,
+                end: 11,
+            },
+        },
+    ],
+    imports: [
+        RawImport {
+            specifier: "from .base import Base",
+            span: LineRange {
+                start: 1,
+                end: 1,
+            },
+        },
+        RawImport {
+            specifier: "from ..util import read_file",
+            span: LineRange {
+                start: 2,
+                end: 2,
+            },
+        },
+    ],
+    refs: [
+        RawRef {
+            kind: Calls,
+            from: Some(
+                1,
+            ),
+            target: "self.save",
+            span: LineRange {
+                start: 7,
+                end: 7,
+            },
+        },
+        RawRef {
+            kind: Calls,
+            from: Some(
+                2,
+            ),
+            target: "self.load",
+            span: LineRange {
+                start: 11,
+                end: 11,
+            },
+        },
+        RawRef {
+            kind: References,
+            from: Some(
+                0,
+            ),
+            target: "Base",
+            span: LineRange {
+                start: 5,
+                end: 5,
+            },
+        },
+    ],
+}

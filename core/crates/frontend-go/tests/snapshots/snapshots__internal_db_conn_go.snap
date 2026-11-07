@@ -1,0 +1,33 @@
+---
+source: crates/frontend-go/tests/snapshots.rs
+expression: file
+---
+language: go
+path: internal/db/conn.go
+defs:
+  - kind: class
+    qualified_name: Conn
+    parent: ~
+    range:
+      start: 3
+      end: 5
+  - kind: function
+    qualified_name: Open
+    parent: ~
+    range:
+      start: 7
+      end: 9
+imports: []
+refs:
+  - kind: references
+    from: 1
+    target: Conn
+    span:
+      start: 7
+      end: 7
+  - kind: references
+    from: 1
+    target: Conn
+    span:
+      start: 8
+      end: 8
